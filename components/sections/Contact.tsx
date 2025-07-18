@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+// Import Variants from framer-motion
+import { motion, Variants } from "framer-motion"; 
 import { Mail, Linkedin, Github, Send } from "lucide-react";
 import Link from "next/link";
 
@@ -21,7 +22,6 @@ export function Contact() {
     e.preventDefault();
     setStatus("Submitting...");
 
-    // TODO: Replace this with a call to a real backend/email service
     console.log({
       name,
       email,
@@ -29,7 +29,6 @@ export function Contact() {
       submittedAt: new Date().toISOString(),
     });
 
-    // Simulate a network request
     setTimeout(() => {
       setStatus("Message sent successfully! I'll get back to you soon.");
       setName("");
@@ -38,7 +37,8 @@ export function Contact() {
     }, 1000);
   };
 
-  const sectionVariants = {
+  // Explicitly type the variants object with the Variants type
+  const sectionVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
@@ -76,16 +76,16 @@ export function Contact() {
             </p>
             <div className="flex flex-col gap-4">
               <a
-                href="mailto:suneelgiri641@gmail.com" 
+                href="mailto:suneelgiree@example.com"
                 className="group flex items-center gap-3 text-lg"
               >
                 <Mail className="h-5 w-5 text-primary transition-transform group-hover:scale-110" />
                 <span className="text-foreground/90 transition-colors group-hover:text-primary">
-                  suneelgiri641@gmail.com
+                  suneelgiree@example.com
                 </span>
               </a>
               <Link
-                href="https://www.linkedin.com/in/sunil-giri-b106b8259/" // <-- TODO: Replace with your LinkedIn profile
+                href="https://linkedin.com/in/suneelgiree"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 text-lg"
