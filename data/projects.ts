@@ -37,4 +37,13 @@ export const projects: Project[] = [
     imageUrl: "https://placehold.co/1280x720/7a7a7a/ffffff?text=Portfolio",
     githubUrl: "https://github.com/suneelgiree/iNotebook",
   },
+  {
+    title: "NEWSapp",
+    description:
+      "A feature-rich news aggregation application built with React using class-based component architecture. NewsWave fetches real-time news from multiple sources via News API, demonstrating solid OOP principles and React's class component lifecycle methods. ",
+    tags: ["React", "News API", "Class Components", "OOP Principles"],
+    // Updated URL
+    imageUrl: "https://placehold.co/1280x720/1a1a1a/ffffff?text=E-commerce",
+    githubUrl: "https://github.com/suneelgiree/NEWSapp",
+  },
 ];
