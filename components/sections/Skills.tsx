@@ -46,7 +46,7 @@ export function Skills() {
             variants={itemVariants}
           >
             I focus on modern technologies to build robust and scalable web applications.
-            Here's a look at my tech stack.
+            Here&apos;s a look at my tech stack.
           </motion.p>
         </div>
 

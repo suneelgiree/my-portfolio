@@ -46,8 +46,8 @@ export function Projects() {
             My Work & Projects
           </h2>
           <p className="mx-auto mt-4 max-w-[700px] text-lg text-foreground/70 md:text-xl">
-            Here are some of the projects I'm proud of. Each one demonstrates my
-            passion for clean code and great user experiences.
+            Here are some of the projects I&apos;ve worked on. Each one represents a
+            unique challenge and a learning opportunity.
           </p>
         </motion.div>
 
