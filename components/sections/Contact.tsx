@@ -15,7 +15,7 @@ import Link from "next/link";
 export function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [message, setMessaFge] = useState("");
   const [status, setStatus] = useState("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

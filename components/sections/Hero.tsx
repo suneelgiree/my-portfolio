@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; 
 
 /**
  * @purpose The Hero section for the homepage with entry animations.
@@ -76,13 +76,13 @@ export function Hero() {
           </motion.p>
           <motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
             <Link
-              href="#projects" // Corrected: Changed from "/projects" to "#projects"
+              href="#projects" 
               className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             >
               View My Work
             </Link>
             <Link
-              href="#contact" // Corrected: Changed from "/contact" to "#contact"
+              href="#contact" 
               className="inline-flex h-12 items-center justify-center rounded-md border border-input bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             >
               Get In Touch
