@@ -13,7 +13,7 @@ import { motion, Variants } from "framer-motion";
  * @returns A JSX element representing the animated Hero section.
  */
 export function Hero() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -23,7 +23,7 @@ export function Hero() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
@@ -34,7 +34,7 @@ export function Hero() {
     },
   };
 
-  const imageVariants = {
+  const imageVariants: Variants = {
     hidden: { scale: 0.8, opacity: 0 },
     visible: {
       scale: 1,
