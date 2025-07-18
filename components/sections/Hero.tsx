@@ -1,32 +1,84 @@
+"use client"; // This is now a Client Component
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion"; // Import motion
 
 /**
- * @purpose The Hero section for the homepage.
- * @description This component displays a prominent headline, a brief introduction,
- * call-to-action buttons, and a profile image. It's designed to be the
- * first thing a user sees.
+ * @purpose The Hero section for the homepage with entry animations.
+ * @description This component uses framer-motion to animate its elements on load.
+ * The main container staggers the animation of its children.
  * @component
- * - `next/image`: For optimized image loading.
- * - `next/link`: For client-side navigation.
- * @returns A JSX element representing the Hero section.
+ * - `motion.div`: A div with animation capabilities.
+ * @returns A JSX element representing the animated Hero section.
  */
 export function Hero() {
+  // Animation variants for the container to stagger children animations
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3, // Stagger the animation of children by 0.3s
+      },
+    },
+  };
+
+  // Animation variants for child elements
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+  
+  // Animation for the image
+  const imageVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <section className="py-20 md:py-32">
+    <motion.section
+      className="py-20 md:py-32"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="container mx-auto grid grid-cols-1 items-center gap-12 md:grid-cols-2">
         {/* Left Column: Text Content */}
-        <div className="flex flex-col items-start gap-6">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+        <motion.div
+          className="flex flex-col items-start gap-6"
+          // This div will also be part of the stagger effect
+          variants={itemVariants} 
+        >
+          <motion.h1
+            className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
+            variants={itemVariants}
+          >
             <span className="block text-foreground/80">Hi, I'm Suneel Giri</span>
             A Senior Web Developer
-          </h1>
-          <p className="max-w-[600px] text-lg text-foreground/70 md:text-xl">
+          </motion.h1>
+          <motion.p
+            className="max-w-[600px] text-lg text-foreground/70 md:text-xl"
+            variants={itemVariants}
+          >
             I specialize in building exceptional, high-performance websites and applications
             using modern frontend technologies like React, Next.js, and TypeScript— combining
-            frontend precision with backend power to ship real-worldproducts that actually solve problems.
-          </p>
-          <div className="flex flex-wrap gap-4">
+            frontend precision with backend power to ship real-world products that actually solve problems.
+          </motion.p>
+          <motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
             <Link
               href="/projects"
               className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
@@ -39,20 +91,23 @@ export function Hero() {
             >
               Get In Touch
             </Link>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Right Column: Image */}
-        <div className="relative mx-auto h-[300px] w-[300px] md:h-[400px] md:w-[400px]">
+        <motion.div
+          className="relative mx-auto h-[300px] w-[300px] md:h-[400px] md:w-[400px]"
+          variants={imageVariants}
+        >
           <Image
-            src="/images/profile-picture.png" 
+            src="/images/profile-picture.png"
             alt="Suneel Giri"
             fill
-            priority // Preload this image as it's above the fold
+            priority
             className="rounded-full object-cover shadow-lg"
           />
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
