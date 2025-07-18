@@ -1,8 +1,8 @@
-"use client"; // This is now a Client Component
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion"; // Import motion
+import { motion } from "framer-motion";
 
 /**
  * @purpose The Hero section for the homepage with entry animations.
@@ -13,18 +13,16 @@ import { motion } from "framer-motion"; // Import motion
  * @returns A JSX element representing the animated Hero section.
  */
 export function Hero() {
-  // Animation variants for the container to stagger children animations
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3, // Stagger the animation of children by 0.3s
+        staggerChildren: 0.3,
       },
     },
   };
 
-  // Animation variants for child elements
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -35,8 +33,7 @@ export function Hero() {
       },
     },
   };
-  
-  // Animation for the image
+
   const imageVariants = {
     hidden: { scale: 0.8, opacity: 0 },
     visible: {
@@ -60,8 +57,7 @@ export function Hero() {
         {/* Left Column: Text Content */}
         <motion.div
           className="flex flex-col items-start gap-6"
-          // This div will also be part of the stagger effect
-          variants={itemVariants} 
+          variants={itemVariants}
         >
           <motion.h1
             className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
@@ -80,13 +76,13 @@ export function Hero() {
           </motion.p>
           <motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
             <Link
-              href="/projects"
+              href="#projects" // Corrected: Changed from "/projects" to "#projects"
               className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             >
               View My Work
             </Link>
             <Link
-              href="/contact"
+              href="#contact" // Corrected: Changed from "/contact" to "#contact"
               className="inline-flex h-12 items-center justify-center rounded-md border border-input bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             >
               Get In Touch
