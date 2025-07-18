@@ -41,7 +41,7 @@ export function Hero() {
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     },
   };
@@ -63,7 +63,7 @@ export function Hero() {
             className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
             variants={itemVariants}
           >
-            <span className="block text-foreground/80">Hi, I&apos;m Suneel Giri</span>{" "}
+            <span className="block text-foreground/80">Hi, I&apos;m Suneel Giri</span>
             A Senior Web Developer
           </motion.h1>
           <motion.p
