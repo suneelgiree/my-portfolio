@@ -1,17 +1,16 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/common/Footer"; // Import the Footer
 
-// Using Inter font from Google Fonts
 const inter = Inter({ subsets: ["latin"] });
 
-// Metadata for SEO.
 export const metadata: Metadata = {
   title: "Suneel Giri - Portfolio",
-  description: "A portfolio built with Next.js, TypeScript, and Tailwind CSS.",
+  description: "Personal portfolio of Suneel Giri, a passionate web developer.",
 };
 
 export default function RootLayout({
@@ -21,17 +20,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} bg-background text-foreground`}>
+      <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <main className="container mx-auto max-w-screen-2xl flex-grow px-4">
-            {children}
-          </main>
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            {/* Main content area */}
+            {/* The main content is wrapped in a <main> tag for better semantics */}
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>

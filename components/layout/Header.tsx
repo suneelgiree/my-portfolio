@@ -1,71 +1,72 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemeToggle } from "@/components/layout/ThemeToggle"; // Using the path you provided
+import { Mountain } from "lucide-react";
+
+// Navigation links data
+const navLinks = [
+  { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
+  { href: "#contact", label: "Contact" },
+];
 
 /**
- * @purpose The main header and navigation bar for the website.
- * @description Contains the site logo/name, navigation links, and the theme toggle.
- * It's designed to be responsive and uses Next.js's Link component for optimized navigation.
- * @returns A header element with navigation.
+ * @purpose The global header for the website.
+ * @description A sticky header that provides navigation and theme toggling.
+ * It becomes opaque on scroll for better visibility.
+ * @returns A JSX element representing the header.
  */
 export function Header() {
-  const navLinks = [
-    { href: "/about", label: "About" },
-    { href: "/projects", label: "Projects" },
-    { href: "/contact", label: "Contact" },
-  ];
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Set state based on scroll position (e.g., > 10px)
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    // Add event listener for scroll
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-4">
-        {/* Site Logo/Name */}
-        <Link
-          href="/"
-          className="text-2xl font-bold tracking-tight text-foreground transition-colors hover:text-foreground/80"
-        >
-          Suneel Giri
+    <header
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ease-in-out ${
+        isScrolled
+          ? "bg-background/80 backdrop-blur-sm shadow-md"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto flex h-16 items-center justify-between">
+        {/* Logo/Brand Name */}
+        <Link href="#top" className="flex items-center gap-2">
+          <Mountain className="h-6 w-6" />
+          <span className="text-lg font-bold">Suneel Giree</span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex">
-          <ul className="flex items-center space-x-6 text-sm font-medium">
-            {navLinks.map(({ href, label }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className="text-foreground/60 transition-colors hover:text-foreground/80"
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        {/* Navigation Links */}
+        <nav className="hidden items-center gap-6 md:flex">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
-        <div className="flex items-center space-x-4">
-          {/* Theme Toggle */}
+        {/* Theme Toggle */}
+        <div className="flex items-center gap-4">
           <ThemeToggle />
-
-          {/* Mobile Menu Button */}
-          <button className="inline-flex h-10 w-10 items-center justify-center rounded-md p-2 text-sm font-medium md:hidden">
-            {/* we can use an icon here, e.g., from lucide-react */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6"
-            >
-              <line x1="4" x2="20" y1="12" y2="12" />
-              <line x1="4" x2="20" y1="6" y2="6" />
-              <line x1="4" x2="20" y1="18" y2="18" />
-            </svg>
-            <span className="sr-only">Open menu</span>
-          </button>
         </div>
       </div>
     </header>
