@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { skillCategories } from "@/data/skills";
 
 /**
- * @purpose The Skills section of the portfolio.
+ * @purpose The Skills section of the portfolio (text-only version).
  * @description This component displays a categorized list of technical skills.
  * It uses framer-motion for engaging animations as it scrolls into view.
  * @returns A JSX element representing the Skills section.
@@ -52,7 +52,7 @@ export function Skills() {
 
         <motion.div
           className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
-          variants={sectionVariants} // Reuse section variants for staggering
+          variants={sectionVariants}
         >
           {skillCategories.map((category) => (
             <motion.div
@@ -64,6 +64,7 @@ export function Skills() {
                 {category.title}
               </h3>
               <ul className="flex flex-wrap gap-2">
+                {/* The rendering logic is now simpler */}
                 {category.skills.map((skill) => (
                   <motion.li
                     key={skill}
