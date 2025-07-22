@@ -55,11 +55,11 @@ export function Hero() {
             className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 dark:text-white"
             variants={itemVariants}
           >
-            <span className="block text-gray-700 dark:text-gray-400">Hi, I&apos;m Suneel Giri</span>{" "}
-            A Senior Web Developer
+            Hi, I&apos;m Suneel Giri
+            <span className="block text-blue-700 dark:text-blue-400">A Senior Web Developer</span>
           </motion.h1>
           <motion.p
-            className="max-w-[600px] text-lg text-gray-700 md:text-xl dark:text-gray-400"
+            className="max-w-[600px] text-lg text-gray-700 dark:text-gray-300 md:text-xl"
             variants={itemVariants}
           >
             I specialize in building exceptional, high-performance websites and applications
@@ -69,13 +69,13 @@ export function Hero() {
           <motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
             <Link
               href="#projects" 
-              className="inline-flex h-12 items-center justify-center rounded-md bg-blue-600 dark:bg-blue-500 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700 dark:hover:bg-blue-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50"
+              className="inline-flex h-12 items-center justify-center rounded-md bg-blue-600 dark:bg-blue-500 px-8 text-sm font-medium text-white dark:text-gray-900 shadow transition-colors hover:bg-blue-700 dark:hover:bg-blue-400 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50"
             >
               View My Work
             </Link>
             <Link
               href="#contact" 
-              className="inline-flex h-12 items-center justify-center rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50"
+              className="inline-flex h-12 items-center justify-center rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-8 text-sm font-medium text-gray-900 dark:text-white shadow-sm transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50"
             >
               Get In Touch
             </Link>

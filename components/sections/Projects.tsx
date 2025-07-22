@@ -39,7 +39,7 @@ export function Projects() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-900 dark:text-white">
             My Work & Projects
           </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-lg text-gray-700 md:text-xl dark:text-gray-400">
+          <p className="mx-auto mt-4 max-w-[700px] text-lg text-gray-700 md:text-xl dark:text-gray-300">
             Here are some of the projects I&apos;ve worked on. Each one represents a
             unique challenge and a learning opportunity.
           </p>

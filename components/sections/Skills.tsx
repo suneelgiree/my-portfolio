@@ -36,7 +36,7 @@ export function Skills() {
             My Technical Skills
           </motion.h2>
           <motion.p
-            className="mx-auto mt-4 max-w-[700px] text-lg text-gray-700 md:text-xl dark:text-gray-400"
+            className="mx-auto mt-4 max-w-[700px] text-lg text-gray-700 dark:text-gray-300 md:text-xl"
             variants={itemVariants}
           >
             I focus on modern technologies to build robust and scalable web applications.
