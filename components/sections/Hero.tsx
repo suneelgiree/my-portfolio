@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion, Variants } from "framer-motion"; 
+// import { motion, Variants } from "framer-motion"; 
 
 /**
  * @purpose The Hero section for the homepage with entry animations.
