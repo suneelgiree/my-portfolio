@@ -26,7 +26,7 @@ export function Hero() {
       <div className="container mx-auto grid grid-cols-1 items-center gap-12 md:grid-cols-2">
         <motion.div className="flex flex-col items-start gap-6" variants={itemVariants}>
           <motion.h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-blue-700 dark:text-blue-400" variants={itemVariants}>
-            Hi, I'm Suneel Giri
+            Hi, I&apos;m Suneel Giri
             <span className="block text-blue-600 dark:text-blue-300">A Senior Web Developer</span>
           </motion.h1>
           <motion.p className="max-w-[600px] text-lg text-blue-700 dark:text-blue-300 md:text-xl" variants={itemVariants}>

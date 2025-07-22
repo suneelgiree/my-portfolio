@@ -22,7 +22,7 @@ export function Projects() {
             My Work & Projects
           </h2>
           <p className="mx-auto mt-4 max-w-[700px] text-lg text-blue-700 md:text-xl dark:text-blue-300">
-            Here are some of the projects I've worked on. Each one represents a unique challenge and a learning opportunity.
+            Here are some of the projects I&apos;ve worked on.
           </p>
         </motion.div>
         <motion.div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={containerVariants}>
