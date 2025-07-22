@@ -17,7 +17,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <motion.div
       whileHover={{ y: -8 }}
       transition={{ type: "spring", stiffness: 300 }}
-      className="flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-lg"
+      className="flex h-full flex-col overflow-hidden rounded-lg border border-blue-200 dark:border-blue-700 bg-white dark:bg-blue-900 shadow-lg"
     >
       <div className="relative h-48 w-full">
         <Image
@@ -29,13 +29,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
         />
       </div>
       <div className="flex flex-1 flex-col p-6">
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h3>
-        <p className="mt-2 flex-grow text-gray-700 dark:text-gray-300">{description}</p>
+        <h3 className="text-xl font-semibold text-blue-700 dark:text-blue-300">{title}</h3>
+        <p className="mt-2 flex-grow text-blue-700 dark:text-blue-300">{description}</p>
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full bg-gray-100 dark:bg-gray-800 px-3 py-1 text-xs font-medium text-gray-800 dark:text-gray-100"
+              className="rounded-full bg-blue-100 dark:bg-blue-800 px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-200"
             >
               {tag}
             </span>
@@ -46,7 +46,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-600 dark:hover:text-white"
+            className="flex items-center gap-2 text-sm text-blue-700 dark:text-blue-300 transition-colors hover:text-blue-800 dark:hover:text-blue-200"
           >
             <Github className="h-4 w-4" />
             GitHub
@@ -56,7 +56,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 transition-colors hover:text-blue-600 dark:hover:text-white"
+              className="flex items-center gap-2 text-sm text-blue-700 dark:text-blue-300 transition-colors hover:text-blue-800 dark:hover:text-blue-200"
             >
               <ExternalLink className="h-4 w-4" />
               Live Demo

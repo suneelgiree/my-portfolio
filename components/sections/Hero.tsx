@@ -25,11 +25,11 @@ export function Hero() {
     <motion.section className="py-20 md:py-32" variants={containerVariants} initial="hidden" animate="visible">
       <div className="container mx-auto grid grid-cols-1 items-center gap-12 md:grid-cols-2">
         <motion.div className="flex flex-col items-start gap-6" variants={itemVariants}>
-          <motion.h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 dark:text-white" variants={itemVariants}>
+          <motion.h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-blue-700 dark:text-blue-400" variants={itemVariants}>
             Hi, I'm Suneel Giri
-            <span className="block text-blue-700 dark:text-blue-400">A Senior Web Developer</span>
+            <span className="block text-blue-600 dark:text-blue-300">A Senior Web Developer</span>
           </motion.h1>
-          <motion.p className="max-w-[600px] text-lg text-gray-700 dark:text-gray-300 md:text-xl" variants={itemVariants}>
+          <motion.p className="max-w-[600px] text-lg text-blue-700 dark:text-blue-300 md:text-xl" variants={itemVariants}>
             I specialize in building exceptional, high-performance websites and applications using modern frontend technologies like React, Next.js, and TypeScript—combining frontend precision with backend power to ship real-world products that actually solve problems.
           </motion.p>
           <motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
@@ -41,7 +41,7 @@ export function Hero() {
             </Link>
             <Link
               href="#contact"
-              className="inline-flex h-12 items-center justify-center rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-8 text-sm font-medium text-gray-900 dark:text-white shadow-sm transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50"
+              className="inline-flex h-12 items-center justify-center rounded-md border border-blue-300 dark:border-blue-700 bg-white dark:bg-blue-900 px-8 text-sm font-medium text-blue-700 dark:text-blue-300 shadow-sm transition-colors hover:bg-blue-100 dark:hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50"
             >
               Get In Touch
             </Link>

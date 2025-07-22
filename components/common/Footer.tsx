@@ -5,9 +5,9 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-gray-200 dark:border-gray-700 py-8 bg-white dark:bg-gray-900">
+    <footer className="border-t border-blue-200 dark:border-blue-700 py-8 bg-white dark:bg-blue-900">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 sm:flex-row">
-        <p className="text-sm text-gray-700 dark:text-gray-300">
+        <p className="text-sm text-blue-700 dark:text-blue-300">
           © {currentYear} Suneel Giri. All Rights Reserved.
         </p>
         <div className="flex items-center gap-4">
@@ -16,7 +16,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-gray-700 dark:text-gray-100 transition-colors hover:text-blue-600 dark:hover:text-blue-400"
+            className="text-blue-700 dark:text-blue-300 transition-colors hover:text-blue-800 dark:hover:text-blue-200"
           >
             <Github className="h-5 w-5" />
           </Link>
@@ -25,7 +25,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-gray-700 dark:text-gray-100 transition-colors hover:text-blue-600 dark:hover:text-blue-400"
+            className="text-blue-700 dark:text-blue-300 transition-colors hover:text-blue-800 dark:hover:text-blue-200"
           >
             <Linkedin className="h-5 w-5" />
           </Link>

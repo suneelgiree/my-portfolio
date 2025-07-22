@@ -29,35 +29,35 @@ export function Contact() {
     <motion.section id="contact" className="py-20 md:py-32" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={sectionVariants}>
       <div className="container mx-auto">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-900 dark:text-white">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-blue-700 dark:text-blue-400">
             Get In Touch
           </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-lg text-gray-700 dark:text-gray-300 md:text-xl">
+          <p className="mx-auto mt-4 max-w-[700px] text-lg text-blue-700 dark:text-blue-300 md:text-xl">
             Have a question, a project proposal, or just want to say hello? Feel free to reach out.
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-2">
           <motion.div className="flex flex-col gap-6" variants={sectionVariants}>
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Contact Information</h3>
-            <p className="text-gray-700 dark:text-gray-300">
+            <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-300">Contact Information</h3>
+            <p className="text-blue-700 dark:text-blue-300">
               You can reach me via email or connect with me on social media.
             </p>
             <div className="flex flex-col gap-4">
               <a href="mailto:suneelgiree@example.com" className="group flex items-center gap-3 text-lg">
                 <Mail className="h-5 w-5 text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" />
-                <span className="text-gray-900 dark:text-white transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                <span className="text-blue-700 dark:text-blue-300 transition-colors group-hover:text-blue-800 dark:group-hover:text-blue-200">
                   suneelgiree@example.com
                 </span>
               </a>
               <Link href="https://linkedin.com/in/suneelgiree" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-lg">
                 <Linkedin className="h-5 w-5 text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" />
-                <span className="text-gray-900 dark:text-white transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                <span className="text-blue-700 dark:text-blue-300 transition-colors group-hover:text-blue-800 dark:group-hover:text-blue-200">
                   suneelgiree
                 </span>
               </Link>
               <Link href="https://github.com/suneelgiree" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-lg">
                 <Github className="h-5 w-5 text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" />
-                <span className="text-gray-900 dark:text-white transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                <span className="text-blue-700 dark:text-blue-300 transition-colors group-hover:text-blue-800 dark:group-hover:text-blue-200">
                   suneelgiree
                 </span>
               </Link>
@@ -71,7 +71,7 @@ export function Contact() {
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Your Name"
                 required
-                className="h-12 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-base text-gray-900 dark:text-white ring-offset-white dark:ring-offset-gray-900 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                className="h-12 rounded-md border border-blue-300 dark:border-blue-700 bg-white dark:bg-blue-900 px-4 py-2 text-base text-blue-700 dark:text-blue-300 ring-offset-white dark:ring-offset-blue-900 placeholder:text-blue-400 dark:placeholder:text-blue-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               />
               <input
                 type="email"
@@ -79,7 +79,7 @@ export function Contact() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your Email"
                 required
-                className="h-12 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-base text-gray-900 dark:text-white ring-offset-white dark:ring-offset-gray-900 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                className="h-12 rounded-md border border-blue-300 dark:border-blue-700 bg-white dark:bg-blue-900 px-4 py-2 text-base text-blue-700 dark:text-blue-300 ring-offset-white dark:ring-offset-blue-900 placeholder:text-blue-400 dark:placeholder:text-blue-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               />
               <textarea
                 value={message}
@@ -87,7 +87,7 @@ export function Contact() {
                 placeholder="Your Message"
                 required
                 rows={5}
-                className="min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-base text-gray-900 dark:text-white ring-offset-white dark:ring-offset-gray-900 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                className="min-h-[80px] rounded-md border border-blue-300 dark:border-blue-700 bg-white dark:bg-blue-900 px-4 py-2 text-base text-blue-700 dark:text-blue-300 ring-offset-white dark:ring-offset-blue-900 placeholder:text-blue-400 dark:placeholder:text-blue-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               />
               <button
                 type="submit"
@@ -99,7 +99,7 @@ export function Contact() {
               </button>
             </form>
             {status && (
-              <p className="mt-4 text-center text-sm text-gray-700 dark:text-gray-300">{status}</p>
+              <p className="mt-4 text-center text-sm text-blue-700 dark:text-blue-300">{status}</p>
             )}
           </motion.div>
         </div>
