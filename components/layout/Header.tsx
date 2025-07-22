@@ -15,23 +15,13 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ease-in-out ${
-        isScrolled
-          ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-md"
-          : "bg-transparent"
-      }`}
-    >
+    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ease-in-out ${isScrolled ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-md" : "bg-transparent"}`}>
       <div className="container mx-auto flex h-16 items-center justify-between">
         <Link href="#top" className="flex items-center gap-2">
           <Mountain className="h-6 w-6 text-gray-900 dark:text-white" />

@@ -10,7 +10,6 @@ export function Footer() {
         <p className="text-sm text-gray-700 dark:text-gray-300">
           © {currentYear} Suneel Giri. All Rights Reserved.
         </p>
-
         <div className="flex items-center gap-4">
           <Link
             href="https://github.com/suneelgiree"
