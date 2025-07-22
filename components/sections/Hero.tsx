@@ -3,15 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from 'framer-motion';
+import { Variants } from "framer-motion";
 
-/**
- * @purpose The Hero section for the homepage with entry animations.
- * @description This component uses framer-motion to animate its elements on load.
- * The main container staggers the animation of its children.
- * @component
- * - `motion.div`: A div with animation capabilities.
- * @returns A JSX element representing the animated Hero section.
- */
+
 export function Hero() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -34,14 +28,14 @@ export function Hero() {
     },
   };
 
-  const imageVariants = {
+  const imageVariants: Variants = {
     hidden: { scale: 0.8, opacity: 0 },
     visible: {
       scale: 1,
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: "easeInOut",
+        ease: "easeInOut", 
       },
     },
   };
