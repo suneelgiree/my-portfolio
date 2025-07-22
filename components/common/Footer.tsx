@@ -1,19 +1,13 @@
 import Link from "next/link";
 import { Github, Linkedin } from "lucide-react";
 
-/**
- * @purpose The global footer for the website.
- * @description Displays copyright information with a dynamic year and social media links.
- * It's designed to be used in the main layout file.
- * @returns A JSX element representing the footer.
- */
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border/40 py-8">
+    <footer className="border-t border-gray-200 dark:border-gray-700 py-8 bg-white dark:bg-gray-900">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 sm:flex-row">
-        <p className="text-sm text-foreground/60">
+        <p className="text-sm text-gray-600 dark:text-gray-400">
           © {currentYear} Suneel Giri. All Rights Reserved.
         </p>
 
@@ -23,7 +17,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-foreground/80 transition-colors hover:text-primary"
+            className="text-gray-600 dark:text-gray-300 transition-colors hover:text-blue-600 dark:hover:text-blue-400"
           >
             <Github className="h-5 w-5" />
           </Link>
@@ -32,7 +26,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-foreground/80 transition-colors hover:text-primary"
+            className="text-gray-600 dark:text-gray-300 transition-colors hover:text-blue-600 dark:hover:text-blue-400"
           >
             <Linkedin className="h-5 w-5" />
           </Link>

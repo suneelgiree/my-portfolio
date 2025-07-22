@@ -4,12 +4,6 @@ import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/cards/ProjectCard";
 
-/**
- * @purpose The Projects section of the portfolio.
- * @description This component fetches project data and maps over it to display
- * a grid of ProjectCard components. It includes entry animations for the section.
- * @returns A JSX element representing the Projects section.
- */
 export function Projects() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -42,10 +36,10 @@ export function Projects() {
           variants={itemVariants}
           className="text-center"
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-900 dark:text-white">
             My Work & Projects
           </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-lg text-foreground/70 md:text-xl">
+          <p className="mx-auto mt-4 max-w-[700px] text-lg text-gray-700 md:text-xl dark:text-gray-400">
             Here are some of the projects I&apos;ve worked on. Each one represents a
             unique challenge and a learning opportunity.
           </p>

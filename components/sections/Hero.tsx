@@ -2,9 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from 'framer-motion';
-import { Variants } from "framer-motion";
-
+import { motion, Variants } from 'framer-motion';
 
 export function Hero() {
   const containerVariants = {
@@ -54,14 +52,14 @@ export function Hero() {
           variants={itemVariants}
         >
           <motion.h1
-            className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
+            className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 dark:text-white"
             variants={itemVariants}
           >
-            <span className="block text-foreground/80 dark:text-white dark:text-white">Hi, I&apos;m Suneel Giri</span>{" "}
+            <span className="block text-gray-700 dark:text-gray-400">Hi, I&apos;m Suneel Giri</span>{" "}
             A Senior Web Developer
           </motion.h1>
           <motion.p
-            className="max-w-[600px] text-lg text-foreground/70 dark:text-gray-400 md:text-xl"
+            className="max-w-[600px] text-lg text-gray-700 md:text-xl dark:text-gray-400"
             variants={itemVariants}
           >
             I specialize in building exceptional, high-performance websites and applications
@@ -71,13 +69,13 @@ export function Hero() {
           <motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
             <Link
               href="#projects" 
-              className="inline-flex h-12 items-center justify-center rounded-md bg-primary dark:bg-blue-600 px-8 text-sm font-medium text-primary-foreground dark:text-white shadow dark:shadow-md transition-colors hover:bg-primary dark:bg-blue-600/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+              className="inline-flex h-12 items-center justify-center rounded-md bg-blue-600 dark:bg-blue-500 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700 dark:hover:bg-blue-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50"
             >
               View My Work
             </Link>
             <Link
               href="#contact" 
-              className="inline-flex h-12 items-center justify-center rounded-md border border-input dark:border-gray-600 bg-transparent dark:bg-transparent px-8 text-sm font-medium shadow dark:shadow-md-sm dark:shadow dark:shadow-md-md transition-colors hover:bg-accent dark:bg-gray-700 hover:text-accent-foreground dark:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+              className="inline-flex h-12 items-center justify-center rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50"
             >
               Get In Touch
             </Link>
@@ -94,7 +92,7 @@ export function Hero() {
             alt="Suneel Giri"
             fill
             priority
-            className="rounded-full object-cover shadow dark:shadow-md-lg"
+            className="rounded-full object-cover shadow-lg"
           />
         </motion.div>
       </div>

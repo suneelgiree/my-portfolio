@@ -1,17 +1,10 @@
 "use client";
 
 import { useState } from "react";
-// Import Variants from framer-motion
 import { motion, Variants } from "framer-motion"; 
 import { Mail, Linkedin, Github, Send } from "lucide-react";
 import Link from "next/link";
 
-/**
- * @purpose The Contact section of the portfolio.
- * @description Provides contact information and a functional form for users to send messages.
- * The form state is handled locally, and submission is currently logged to the console.
- * @returns A JSX element representing the Contact section.
- */
 export function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -21,30 +14,15 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("Submitting...");
-
-    console.log({
-      name,
-      email,
-      message,
-      submittedAt: new Date().toISOString(),
-    });
-
     setTimeout(() => {
       setStatus("Message sent successfully! I'll get back to you soon.");
-      setName("");
-      setEmail("");
-      setMessage("");
+      setName(""); setEmail(""); setMessage("");
     }, 1000);
   };
 
-  // Explicitly type the variants object with the Variants type
   const sectionVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" }},
   };
 
   return (
@@ -58,10 +36,10 @@ export function Contact() {
     >
       <div className="container mx-auto">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-900 dark:text-white">
             Get In Touch
           </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-lg text-foreground/70 md:text-xl">
+          <p className="mx-auto mt-4 max-w-[700px] text-lg text-gray-700 md:text-xl dark:text-gray-400">
             Have a question, a project proposal, or just want to say hello?
             Feel free to reach out.
           </p>
@@ -70,8 +48,8 @@ export function Contact() {
         <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-2">
           {/* Left Column: Contact Info */}
           <motion.div className="flex flex-col gap-6" variants={sectionVariants}>
-            <h3 className="text-2xl font-semibold">Contact Information</h3>
-            <p className="text-foreground/80">
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Contact Information</h3>
+            <p className="text-gray-700 dark:text-gray-400">
               You can reach me via email or connect with me on social media.
             </p>
             <div className="flex flex-col gap-4">
@@ -79,8 +57,8 @@ export function Contact() {
                 href="mailto:suneelgiree@example.com"
                 className="group flex items-center gap-3 text-lg"
               >
-                <Mail className="h-5 w-5 text-primary transition-transform group-hover:scale-110" />
-                <span className="text-foreground/90 transition-colors group-hover:text-primary">
+                <Mail className="h-5 w-5 text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" />
+                <span className="text-gray-900 dark:text-white transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
                   suneelgiree@example.com
                 </span>
               </a>
@@ -90,8 +68,8 @@ export function Contact() {
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 text-lg"
               >
-                <Linkedin className="h-5 w-5 text-primary transition-transform group-hover:scale-110" />
-                <span className="text-foreground/90 transition-colors group-hover:text-primary">
+                <Linkedin className="h-5 w-5 text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" />
+                <span className="text-gray-900 dark:text-white transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
                   suneelgiree
                 </span>
               </Link>
@@ -101,8 +79,8 @@ export function Contact() {
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 text-lg"
               >
-                <Github className="h-5 w-5 text-primary transition-transform group-hover:scale-110" />
-                <span className="text-foreground/90 transition-colors group-hover:text-primary">
+                <Github className="h-5 w-5 text-blue-600 dark:text-blue-400 transition-transform group-hover:scale-110" />
+                <span className="text-gray-900 dark:text-white transition-colors group-hover:text-blue-600 dark:group-hover:text-blue-400">
                   suneelgiree
                 </span>
               </Link>
@@ -118,7 +96,7 @@ export function Contact() {
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Your Name"
                 required
-                className="h-12 rounded-md border border-input bg-transparent px-4 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                className="h-12 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-base ring-offset-white dark:ring-offset-gray-900 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               />
               <input
                 type="email"
@@ -126,7 +104,7 @@ export function Contact() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your Email"
                 required
-                className="h-12 rounded-md border border-input bg-transparent px-4 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                className="h-12 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-base ring-offset-white dark:ring-offset-gray-900 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               />
               <textarea
                 value={message}
@@ -134,11 +112,11 @@ export function Contact() {
                 placeholder="Your Message"
                 required
                 rows={5}
-                className="min-h-[80px] rounded-md border border-input bg-transparent px-4 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                className="min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-base ring-offset-white dark:ring-offset-gray-900 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               />
               <button
                 type="submit"
-                className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 md:w-auto md:self-end"
+                className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-blue-600 dark:bg-blue-500 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700 dark:hover:bg-blue-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50 md:w-auto md:self-end"
                 disabled={status.startsWith("Submitting")}
               >
                 <Send className="h-4 w-4" />
@@ -146,7 +124,7 @@ export function Contact() {
               </button>
             </form>
             {status && (
-              <p className="mt-4 text-center text-sm text-foreground/80">{status}</p>
+              <p className="mt-4 text-center text-sm text-gray-700 dark:text-gray-400">{status}</p>
             )}
           </motion.div>
         </div>

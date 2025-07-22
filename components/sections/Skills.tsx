@@ -3,12 +3,6 @@
 import { motion } from "framer-motion";
 import { skillCategories } from "@/data/skills";
 
-/**
- * @purpose The Skills section of the portfolio (text-only version).
- * @description This component displays a categorized list of technical skills.
- * It uses framer-motion for engaging animations as it scrolls into view.
- * @returns A JSX element representing the Skills section.
- */
 export function Skills() {
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -36,13 +30,13 @@ export function Skills() {
       <div className="container mx-auto">
         <div className="text-center">
           <motion.h2
-            className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
+            className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-900 dark:text-white"
             variants={itemVariants}
           >
             My Technical Skills
           </motion.h2>
           <motion.p
-            className="mx-auto mt-4 max-w-[700px] text-lg text-foreground/70 md:text-xl"
+            className="mx-auto mt-4 max-w-[700px] text-lg text-gray-700 md:text-xl dark:text-gray-400"
             variants={itemVariants}
           >
             I focus on modern technologies to build robust and scalable web applications.
@@ -57,18 +51,17 @@ export function Skills() {
           {skillCategories.map((category) => (
             <motion.div
               key={category.title}
-              className="rounded-xl border border-border/60 bg-card p-6 shadow-md"
+              className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-md"
               variants={itemVariants}
             >
-              <h3 className="mb-4 text-xl font-semibold text-card-foreground">
+              <h3 className="mb-4 text-xl font-semibold text-gray-900 dark:text-white">
                 {category.title}
               </h3>
               <ul className="flex flex-wrap gap-2">
-                {/* The rendering logic is now simpler */}
                 {category.skills.map((skill) => (
                   <motion.li
                     key={skill}
-                    className="rounded-full bg-secondary px-3 py-1.5 text-sm font-medium text-secondary-foreground"
+                    className="rounded-full bg-gray-100 px-3 py-1.5 text-sm font-medium text-gray-800 dark:bg-gray-800 dark:text-gray-100"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 400 }}
                   >
