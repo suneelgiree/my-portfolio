@@ -24,7 +24,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <motion.div
       whileHover={{ y: -8 }}
       transition={{ type: "spring", stiffness: 300 }}
-      className="flex h-full flex-col overflow-hidden rounded-lg border border-border/60 bg-card shadow-lg"
+      className="flex h-full flex-col overflow-hidden rounded-lg border border-border/60 dark:border-gray-700 bg-card dark:bg-gray-900 shadow-lg"
+
     >
       {/* Project Image */}
       <div className="relative h-48 w-full">
@@ -39,15 +40,16 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       {/* Card Content */}
       <div className="flex flex-1 flex-col p-6">
-        <h3 className="text-xl font-semibold text-card-foreground">{title}</h3>
-        <p className="mt-2 flex-grow text-card-foreground/70">{description}</p>
+        <h3 className="text-xl font-semibold text-card-foreground dark:text-white">{title}</h3>
+        <p className="mt-2 flex-grow text-card-foreground/70 dark:text-gray-400">{description}</p>
+
 
         {/* Tech Tags */}
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
+              className="rounded-full bg-secondary dark:bg-gray-700 px-3 py-1 text-xs font-medium text-secondary-foreground dark:text-white"
             >
               {tag}
             </span>
